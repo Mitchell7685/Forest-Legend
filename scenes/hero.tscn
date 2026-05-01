@@ -1,20 +1,195 @@
 [gd_scene format=3 uid="uid://dky1yvbnms74j"]
 
-[ext_resource type="Texture2D" uid="uid://dun4mouiofh1u" path="res://Complete Assets/Hero idle front-Sheet.png" id="1_3uyx6"]
+[ext_resource type="Texture2D" uid="uid://demxve8ykmy6q" path="res://Hero Sprite Sheet.png" id="1_3uyx6"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_yvbpl"]
 radius = 8.0
 height = 26.0
 
+[sub_resource type="Animation" id="Animation_3uyx6"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+
+[sub_resource type="Animation" id="Animation_n5qna"]
+resource_name = "attack_back"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [33, 34]
+}
+
+[sub_resource type="Animation" id="Animation_n40cg"]
+resource_name = "attack_front"
+length = 0.4
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.0009999999, 0.4),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [25, 26]
+}
+
+[sub_resource type="Animation" id="Animation_txblw"]
+resource_name = "attack_side"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [29, 30]
+}
+
+[sub_resource type="Animation" id="Animation_yvbpl"]
+resource_name = "idle"
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0, 2]
+}
+
+[sub_resource type="Animation" id="Animation_06baw"]
+resource_name = "idle_back"
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [8, 10]
+}
+
+[sub_resource type="Animation" id="Animation_mv13s"]
+resource_name = "idle_side"
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [4, 6]
+}
+
+[sub_resource type="Animation" id="Animation_mo806"]
+resource_name = "walk_back"
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [20, 23]
+}
+
+[sub_resource type="Animation" id="Animation_w7pyx"]
+resource_name = "walk_front"
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [12, 15]
+}
+
+[sub_resource type="Animation" id="Animation_y2sko"]
+resource_name = "walk_side"
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [16, 19]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_06baw"]
+_data = {
+&"RESET": SubResource("Animation_3uyx6"),
+&"attack_back": SubResource("Animation_n5qna"),
+&"attack_front": SubResource("Animation_n40cg"),
+&"attack_side": SubResource("Animation_txblw"),
+&"idle": SubResource("Animation_yvbpl"),
+&"idle_back": SubResource("Animation_06baw"),
+&"idle_side": SubResource("Animation_mv13s"),
+&"walk_back": SubResource("Animation_mo806"),
+&"walk_front": SubResource("Animation_w7pyx"),
+&"walk_side": SubResource("Animation_y2sko")
+}
+
 [node name="CharacterBody2D" type="CharacterBody2D" unique_id=2037924149]
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=997798597]
-position = Vector2(0, -14)
+position = Vector2(0, -16)
 texture = ExtResource("1_3uyx6")
-hframes = 3
+hframes = 4
+vframes = 9
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=590263364]
 position = Vector2(0, -13)
 shape = SubResource("CapsuleShape2D_yvbpl")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1730272028]
+libraries/ = SubResource("AnimationLibrary_06baw")

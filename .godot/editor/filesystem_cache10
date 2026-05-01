@@ -1,7 +1,9 @@
 63f7b34db8d8cdea90c76aacccf841ec
-::res://::1777482352
+::res://::1777587324
+Hero Sprite Sheet.png::CompressedTexture2D::7466224213362041806::1777586756::1777586763::1::::<><><>0<>0<>5a8a3846d085e0255afcdc3fb84a216c<>res://.godot/imported/Hero Sprite Sheet.png-e55aab0964d349b6e25607f3dda124dc.ctex::
 icon.svg::CompressedTexture2D::9155709446412884459::1777482301::1777482354::1::::<><><>0<>0<>404d4c44a53a607527d0de846394752f<>res://.godot/imported/icon.svg-218a8f2b3041327d8a5756f3a245f83b.ctex::
-::res://Complete Assets/::1777482181
+MOB Sprite Sheet.png::CompressedTexture2D::3193058722452470904::1777587319::1777587324::1::::<><><>0<>0<>3cfbf465309532d3afd10fc90837fb78<>res://.godot/imported/MOB Sprite Sheet.png-57fe13ee67b4940db4f90a5a638bdbc9.ctex::
+::res://Complete Assets/::1777482354
 butterfly MOB attack-Sheet.png::CompressedTexture2D::4866972234665221910::1777482181::1777482354::1::::<><><>0<>0<>8d00768ffba32d658a46faacdd8f9d42<>res://.godot/imported/butterfly MOB attack-Sheet.png-63d2a8cf14a9cf284df0dd99a9ec9c48.ctex::
 butterfly MOB idle-Sheet.png::CompressedTexture2D::6241889946674086738::1777482181::1777482354::1::::<><><>0<>0<>c0dfcad3b7da61638a272fef936e2ec0<>res://.godot/imported/butterfly MOB idle-Sheet.png-f7f3b75760e0ff80f9dd3cfdf441ffc7.ctex::
 caterpillar MOB attack-Sheet.png::CompressedTexture2D::1435855681632652863::1777482181::1777482354::1::::<><><>0<>0<>96cc992add2b9a078af4699e25c9b7df<>res://.godot/imported/caterpillar MOB attack-Sheet.png-7d7d77e94b64b961b8c58e946a9da54e.ctex::
@@ -21,3 +23,9 @@ Sick Wife idle-Sheet.png::CompressedTexture2D::7584230303373959801::1777482181::
 tile sheet finale.png::CompressedTexture2D::1152577099273244194::1777482181::1777482354::1::::<><><>0<>0<>cdef3cb6b2f389fda6f55bfb264be4c7<>res://.godot/imported/tile sheet finale.png-fe597cc6c9ec5e2d8540a85139e87170.ctex::
 Wasp MOB attack-Sheet.png::CompressedTexture2D::408486052582813583::1777482181::1777482354::1::::<><><>0<>0<>ba4403c7616eb1de693d625d016bb1c3<>res://.godot/imported/Wasp MOB attack-Sheet.png-115b52c69caec1f5c22fc983c24ed3a7.ctex::
 Wasp MOB idle-Sheet.png::CompressedTexture2D::5259991649965300111::1777482181::1777482354::1::::<><><>0<>0<>98046b6a1506357de4abaf3cb0861838<>res://.godot/imported/Wasp MOB idle-Sheet.png-f3782960fcb006ba571f5c47d1f12aec.ctex::
+::res://scenes/::1777587656
+main.tscn::PackedScene::4787257806259368895::1777483079::0::1::::<><><>0<>0<><>::uid://qok1ns4ii37s::::res://Complete Assets/tile sheet finale.png
+hero.tscn::PackedScene::7912318159565306643::1777587212::0::1::::<><><>0<>0<><>::uid://demxve8ykmy6q::::res://Hero Sprite Sheet.png
+butterfly.tscn::PackedScene::7893766022151943794::1777588006::0::1::::<><><>0<>0<><>::uid://blq0hfrjje3ds::::res://MOB Sprite Sheet.png
+bug.tscn::PackedScene::230447655673077457::1777588186::0::1::::<><><>0<>0<><>::uid://blq0hfrjje3ds::::res://MOB Sprite Sheet.png
+wasp.tscn::PackedScene::3491057925610723248::1777587656::0::1::::<><><>0<>0<><>::uid://blq0hfrjje3ds::::res://MOB Sprite Sheet.png

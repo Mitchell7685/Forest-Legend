@@ -1,0 +1,59 @@
+[gd_scene format=3 uid="uid://cnbmjmanausgi"]
+
+[ext_resource type="Texture2D" uid="uid://f60xuwoctwok" path="res://Complete Assets/Husband NPC idle Sheet.png" id="1_y7lht"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_y7lht"]
+radius = 7.0
+height = 28.0
+
+[sub_resource type="Animation" id="Animation_1b8nh"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+
+[sub_resource type="Animation" id="Animation_aq47v"]
+resource_name = "idle"
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0, 3]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_t7qm5"]
+_data = {
+&"RESET": SubResource("Animation_1b8nh"),
+&"idle": SubResource("Animation_aq47v")
+}
+
+[node name="CharacterBody2D" type="CharacterBody2D" unique_id=783206306]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1067152722]
+position = Vector2(0, -15)
+texture = ExtResource("1_y7lht")
+hframes = 4
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=385976293]
+position = Vector2(0, -14)
+shape = SubResource("CapsuleShape2D_y7lht")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=884111538]
+libraries/ = SubResource("AnimationLibrary_t7qm5")
+autoplay = &"idle"

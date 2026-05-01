@@ -1,0 +1,59 @@
+[gd_scene format=3 uid="uid://khnekb05kwgb"]
+
+[ext_resource type="Texture2D" uid="uid://dgb4fu1hcakvh" path="res://Complete Assets/Sick Wife idle-Sheet.png" id="1_nxsw1"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_5nlk0"]
+radius = 7.0
+height = 28.0
+
+[sub_resource type="Animation" id="Animation_wnnb1"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+
+[sub_resource type="Animation" id="Animation_loed5"]
+resource_name = "idle"
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0, 3]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_anvim"]
+_data = {
+&"RESET": SubResource("Animation_wnnb1"),
+&"idle": SubResource("Animation_loed5")
+}
+
+[node name="CharacterBody2D" type="CharacterBody2D" unique_id=1810206643]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1845550648]
+position = Vector2(0, -15)
+texture = ExtResource("1_nxsw1")
+hframes = 4
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=931617426]
+position = Vector2(0, -14)
+shape = SubResource("CapsuleShape2D_5nlk0")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=2116617679]
+libraries/ = SubResource("AnimationLibrary_anvim")
+autoplay = &"idle"

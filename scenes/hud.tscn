@@ -1,0 +1,26 @@
+[gd_scene format=3 uid="uid://0tjeg4so6tu5"]
+
+[ext_resource type="Texture2D" uid="uid://c2radhm8crume" path="res://Complete Assets/Health Sprite.png" id="1_ahhtf"]
+
+[node name="CanvasLayer" type="CanvasLayer" unique_id=60492299]
+
+[node name="HeartBox" type="HBoxContainer" parent="." unique_id=1303115709]
+offset_left = 45.0
+offset_top = 29.0
+offset_right = 407.0
+offset_bottom = 111.0
+
+[node name="TextureRect" type="TextureRect" parent="HeartBox" unique_id=608863233]
+layout_mode = 2
+texture = ExtResource("1_ahhtf")
+expand_mode = 2
+
+[node name="TextureRect2" type="TextureRect" parent="HeartBox" unique_id=168575558]
+layout_mode = 2
+texture = ExtResource("1_ahhtf")
+expand_mode = 2
+
+[node name="TextureRect3" type="TextureRect" parent="HeartBox" unique_id=1475237712]
+layout_mode = 2
+texture = ExtResource("1_ahhtf")
+expand_mode = 2
