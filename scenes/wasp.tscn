@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://bp0dhjmpw7nq3"]
 
 [ext_resource type="Texture2D" uid="uid://blq0hfrjje3ds" path="res://MOB Sprite Sheet.png" id="1_5hfoy"]
+[ext_resource type="Script" uid="uid://dobb4xvb6w2hi" path="res://scenes/enemy.gd" id="1_jqds0"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_5hfoy"]
 radius = 8.0
@@ -37,7 +38,7 @@ tracks/0/keys = {
 }
 
 [sub_resource type="Animation" id="Animation_jqds0"]
-resource_name = "idle"
+resource_name = "move"
 loop_mode = 1
 tracks/0/type = "value"
 tracks/0/imported = false
@@ -56,10 +57,14 @@ tracks/0/keys = {
 _data = {
 &"RESET": SubResource("Animation_5hfoy"),
 &"attack": SubResource("Animation_a06yw"),
-&"idle": SubResource("Animation_jqds0")
+&"move": SubResource("Animation_jqds0")
 }
 
-[node name="CharacterBody2D" type="CharacterBody2D" unique_id=1823329267]
+[node name="CharacterBody2D" type="CharacterBody2D" unique_id=1823329267 groups=["enemy"]]
+collision_layer = 4
+collision_mask = 7
+script = ExtResource("1_jqds0")
+metadata/_edit_group_ = true
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=540664649]
 position = Vector2(0, -15)
@@ -71,6 +76,12 @@ vframes = 6
 position = Vector2(0, -15)
 shape = SubResource("CapsuleShape2D_5hfoy")
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1802257684]
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1802257684 groups=["enemy"]]
 libraries/ = SubResource("AnimationLibrary_a06yw")
-autoplay = &"idle"
+autoplay = &"move"
+
+[node name="Timer" type="Timer" parent="." unique_id=694140598]
+wait_time = 10.0
+autostart = true
+
+[connection signal="timeout" from="Timer" to="." method="change_dir"]

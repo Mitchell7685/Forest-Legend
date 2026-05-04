@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://dkp2f5df80vok"]
 
 [ext_resource type="Texture2D" uid="uid://blq0hfrjje3ds" path="res://MOB Sprite Sheet.png" id="1_4ki4n"]
+[ext_resource type="Script" uid="uid://dobb4xvb6w2hi" path="res://scenes/enemy.gd" id="2_tq3rt"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_tq3rt"]
 size = Vector2(29.5, 27)
@@ -37,7 +38,7 @@ tracks/0/keys = {
 }
 
 [sub_resource type="Animation" id="Animation_yym88"]
-resource_name = "idle"
+resource_name = "move"
 loop_mode = 1
 tracks/0/type = "value"
 tracks/0/imported = false
@@ -56,10 +57,13 @@ tracks/0/keys = {
 _data = {
 &"RESET": SubResource("Animation_o654m"),
 &"attack": SubResource("Animation_4ki4n"),
-&"idle": SubResource("Animation_yym88")
+&"move": SubResource("Animation_yym88")
 }
 
 [node name="CharacterBody2D" type="CharacterBody2D" unique_id=1827320880]
+collision_layer = 4
+collision_mask = 7
+metadata/_edit_group_ = true
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=666237868]
 position = Vector2(0, -15)
@@ -73,3 +77,5 @@ shape = SubResource("RectangleShape2D_tq3rt")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=615242651]
 libraries/ = SubResource("AnimationLibrary_42pi4")
+autoplay = &"move"
+script = ExtResource("2_tq3rt")

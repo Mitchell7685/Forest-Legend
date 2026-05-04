@@ -1,5 +1,6 @@
 [gd_scene format=3 uid="uid://cnbmjmanausgi"]
 
+[ext_resource type="Script" uid="uid://bn53s1tw4qqqh" path="res://scenes/husband.gd" id="1_1b8nh"]
 [ext_resource type="Texture2D" uid="uid://f60xuwoctwok" path="res://Complete Assets/Husband NPC idle Sheet.png" id="1_y7lht"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_y7lht"]
@@ -43,7 +44,9 @@ _data = {
 &"idle": SubResource("Animation_aq47v")
 }
 
-[node name="CharacterBody2D" type="CharacterBody2D" unique_id=783206306]
+[node name="CharacterBody2D" type="CharacterBody2D" unique_id=783206306 groups=["npc"]]
+script = ExtResource("1_1b8nh")
+metadata/_edit_group_ = true
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1067152722]
 position = Vector2(0, -15)

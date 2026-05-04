@@ -1,6 +1,11 @@
 [gd_scene format=3 uid="uid://cag8o301ngcjf"]
 
 [ext_resource type="Texture2D" uid="uid://qok1ns4ii37s" path="res://Complete Assets/tile sheet finale.png" id="1_o5qli"]
+[ext_resource type="PackedScene" uid="uid://dky1yvbnms74j" path="res://scenes/hero.tscn" id="2_0wfyh"]
+
+[sub_resource type="GDScript" id="GDScript_0wfyh"]
+script/source = "extends Node2D
+"
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_0wfyh"]
 texture = ExtResource("1_o5qli")
@@ -472,6 +477,9 @@ texture = ExtResource("1_o5qli")
 sources/0 = SubResource("TileSetAtlasSource_0wfyh")
 
 [node name="main" type="Node2D" unique_id=851401049]
+script = SubResource("GDScript_0wfyh")
 
 [node name="TileMapLayer" type="TileMapLayer" parent="." unique_id=1312682781]
 tile_set = SubResource("TileSet_sugp2")
+
+[node name="CharacterBody2D" parent="." unique_id=2037924149 instance=ExtResource("2_0wfyh")]

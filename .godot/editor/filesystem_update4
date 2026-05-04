@@ -1,5 +1,8 @@
-res://scenes/main.tscn
 res://scenes/wasp.tscn
-res://scenes/hero.tscn
+res://scenes/wasp.gd
 res://scenes/butterfly.tscn
-res://scenes/husband.tscn
+res://scenes/caterpilar.tscn
+res://scenes/hero.tscn
+res://scenes/enemy.gd
+res://scenes/hero.gd
+res://scenes/main.tscn
