@@ -1,5 +1,6 @@
 [gd_scene format=3 uid="uid://djvo60dwagq0"]
 
+[ext_resource type="Script" uid="uid://dobb4xvb6w2hi" path="res://scenes/enemy.gd" id="1_1qiqc"]
 [ext_resource type="Texture2D" uid="uid://blq0hfrjje3ds" path="res://MOB Sprite Sheet.png" id="1_f31lg"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_sp1hu"]
@@ -38,7 +39,7 @@ tracks/0/keys = {
 }
 
 [sub_resource type="Animation" id="Animation_or574"]
-resource_name = "idle"
+resource_name = "walk"
 loop_mode = 1
 tracks/0/type = "value"
 tracks/0/imported = false
@@ -57,10 +58,11 @@ tracks/0/keys = {
 _data = {
 &"RESET": SubResource("Animation_2xs7f"),
 &"attack": SubResource("Animation_hr7jg"),
-&"idle": SubResource("Animation_or574")
+&"walk": SubResource("Animation_or574")
 }
 
 [node name="CharacterBody2D" type="CharacterBody2D" unique_id=1945511758]
+script = ExtResource("1_1qiqc")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1078787647]
 position = Vector2(0, -16)
@@ -75,4 +77,4 @@ shape = SubResource("RectangleShape2D_sp1hu")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1288407764]
 libraries/ = SubResource("AnimationLibrary_1ngxl")
-autoplay = &"idle"
+autoplay = &"walk"

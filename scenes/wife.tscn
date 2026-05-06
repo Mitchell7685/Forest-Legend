@@ -1,5 +1,6 @@
 [gd_scene format=3 uid="uid://khnekb05kwgb"]
 
+[ext_resource type="Script" uid="uid://1o2ejmvc8cho" path="res://scenes/wife.gd" id="1_5nlk0"]
 [ext_resource type="Texture2D" uid="uid://dgb4fu1hcakvh" path="res://Complete Assets/Sick Wife idle-Sheet.png" id="1_nxsw1"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_5nlk0"]
@@ -43,7 +44,9 @@ _data = {
 &"idle": SubResource("Animation_loed5")
 }
 
-[node name="CharacterBody2D" type="CharacterBody2D" unique_id=1810206643]
+[node name="CharacterBody2D" type="CharacterBody2D" unique_id=1810206643 groups=["npc"]]
+script = ExtResource("1_5nlk0")
+metadata/_edit_group_ = true
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1845550648]
 position = Vector2(0, -15)
