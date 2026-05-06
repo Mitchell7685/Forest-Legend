@@ -1,5 +1,5 @@
 63f7b34db8d8cdea90c76aacccf841ec
-::res://::1777927464
+::res://::1778084512
 Hero Sprite Sheet.png::CompressedTexture2D::7466224213362041806::1777586756::1777586763::1::::<><><>0<>0<>5a8a3846d085e0255afcdc3fb84a216c<>res://.godot/imported/Hero Sprite Sheet.png-e55aab0964d349b6e25607f3dda124dc.ctex::
 icon.svg::CompressedTexture2D::9155709446412884459::1777482301::1777482354::1::::<><><>0<>0<>404d4c44a53a607527d0de846394752f<>res://.godot/imported/icon.svg-218a8f2b3041327d8a5756f3a245f83b.ctex::
 MOB Sprite Sheet.png::CompressedTexture2D::3193058722452470904::1777587319::1777587324::1::::<><><>0<>0<>3cfbf465309532d3afd10fc90837fb78<>res://.godot/imported/MOB Sprite Sheet.png-57fe13ee67b4940db4f90a5a638bdbc9.ctex::
@@ -23,12 +23,12 @@ Sick Wife idle-Sheet.png::CompressedTexture2D::7584230303373959801::1777482181::
 tile sheet finale.png::CompressedTexture2D::1152577099273244194::1777482181::1777482354::1::::<><><>0<>0<>cdef3cb6b2f389fda6f55bfb264be4c7<>res://.godot/imported/tile sheet finale.png-fe597cc6c9ec5e2d8540a85139e87170.ctex::
 Wasp MOB attack-Sheet.png::CompressedTexture2D::408486052582813583::1777482181::1777482354::1::::<><><>0<>0<>ba4403c7616eb1de693d625d016bb1c3<>res://.godot/imported/Wasp MOB attack-Sheet.png-115b52c69caec1f5c22fc983c24ed3a7.ctex::
 Wasp MOB idle-Sheet.png::CompressedTexture2D::5259991649965300111::1777482181::1777482354::1::::<><><>0<>0<>98046b6a1506357de4abaf3cb0861838<>res://.godot/imported/Wasp MOB idle-Sheet.png-f3782960fcb006ba571f5c47d1f12aec.ctex::
-::res://scenes/::1777916058
-butterfly.tscn::PackedScene::7893766022151943794::1777588006::0::1::::<><><>0<>0<><>::uid://blq0hfrjje3ds::::res://MOB Sprite Sheet.png
-caterpilar.tscn::PackedScene::230447655673077457::1777588186::0::1::::<><><>0<>0<><>::uid://blq0hfrjje3ds::::res://MOB Sprite Sheet.png
-hero.tscn::PackedScene::7912318159565306643::1777587212::0::1::::<><><>0<>0<><>::uid://demxve8ykmy6q::::res://Hero Sprite Sheet.png
+::res://scenes/::1778040814
+butterfly.tscn::PackedScene::7893766022151943794::1778040814::0::1::::<><><>0<>0<><>::uid://blq0hfrjje3ds::::res://MOB Sprite Sheet.png
+caterpilar.tscn::PackedScene::230447655673077457::1778040814::0::1::::<><><>0<>0<><>::uid://blq0hfrjje3ds::::res://MOB Sprite Sheet.png
+hero.tscn::PackedScene::7912318159565306643::1778040814::0::1::::<><><>0<>0<><>::uid://demxve8ykmy6q::::res://Hero Sprite Sheet.png
 hud.tscn::PackedScene::1794498225165679466::1777594862::0::1::::<><><>0<>0<><>::uid://c2radhm8crume::::res://Complete Assets/Health Sprite.png
-husband.tscn::PackedScene::5688106019364693852::1777588330::0::1::::<><><>0<>0<><>::uid://f60xuwoctwok::::res://Complete Assets/Husband NPC idle Sheet.png
-main.tscn::PackedScene::4787257806259368895::1777916058::0::1::::<><><>0<>0<><>::uid://qok1ns4ii37s::::res://Complete Assets/tile sheet finale.png<>uid://cnbmjmanausgi::::res://scenes/husband.tscn<>uid://khnekb05kwgb::::res://scenes/wife.tscn<>uid://dky1yvbnms74j::::res://scenes/hero.tscn
-wasp.tscn::PackedScene::3491057925610723248::1777587656::0::1::::<><><>0<>0<><>::uid://blq0hfrjje3ds::::res://MOB Sprite Sheet.png
-wife.tscn::PackedScene::717136072695026101::1777588409::0::1::::<><><>0<>0<><>::uid://dgb4fu1hcakvh::::res://Complete Assets/Sick Wife idle-Sheet.png
+husband.tscn::PackedScene::5688106019364693852::1778040814::0::1::::<><><>0<>0<><>::uid://f60xuwoctwok::::res://Complete Assets/Husband NPC idle Sheet.png
+main.tscn::PackedScene::4787257806259368895::1778040814::0::1::::<><><>0<>0<><>::uid://qok1ns4ii37s::::res://Complete Assets/tile sheet finale.png<>uid://cnbmjmanausgi::::res://scenes/husband.tscn<>uid://khnekb05kwgb::::res://scenes/wife.tscn<>uid://dky1yvbnms74j::::res://scenes/hero.tscn
+wasp.tscn::PackedScene::3491057925610723248::1778040814::0::1::::<><><>0<>0<><>::uid://blq0hfrjje3ds::::res://MOB Sprite Sheet.png
+wife.tscn::PackedScene::717136072695026101::1778040814::0::1::::<><><>0<>0<><>::uid://dgb4fu1hcakvh::::res://Complete Assets/Sick Wife idle-Sheet.png
