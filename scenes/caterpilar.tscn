@@ -1,5 +1,6 @@
 [gd_scene format=3 uid="uid://djvo60dwagq0"]
 
+[ext_resource type="Script" uid="uid://b5tr24o1pfjv0" path="res://scripts/enemy.gd" id="1_1qiqc"]
 [ext_resource type="Texture2D" uid="uid://blq0hfrjje3ds" path="res://MOB Sprite Sheet.png" id="1_f31lg"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_sp1hu"]
@@ -61,6 +62,7 @@ _data = {
 }
 
 [node name="CharacterBody2D" type="CharacterBody2D" unique_id=1945511758]
+script = ExtResource("1_1qiqc")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1078787647]
 position = Vector2(0, -16)

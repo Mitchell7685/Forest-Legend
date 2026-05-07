@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://bp0dhjmpw7nq3"]
 
 [ext_resource type="Texture2D" uid="uid://blq0hfrjje3ds" path="res://MOB Sprite Sheet.png" id="1_5hfoy"]
+[ext_resource type="Script" uid="uid://b5tr24o1pfjv0" path="res://scripts/enemy.gd" id="1_jqds0"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_5hfoy"]
 radius = 8.0
@@ -60,6 +61,7 @@ _data = {
 }
 
 [node name="CharacterBody2D" type="CharacterBody2D" unique_id=1823329267]
+script = ExtResource("1_jqds0")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=540664649]
 position = Vector2(0, -15)

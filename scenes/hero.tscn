@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://dky1yvbnms74j"]
 
 [ext_resource type="Texture2D" uid="uid://demxve8ykmy6q" path="res://Hero Sprite Sheet.png" id="1_3uyx6"]
+[ext_resource type="Script" uid="uid://din8t83jlg2oh" path="res://scripts/hero.gd" id="1_yvbpl"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_yvbpl"]
 radius = 8.0
@@ -180,6 +181,7 @@ _data = {
 }
 
 [node name="CharacterBody2D" type="CharacterBody2D" unique_id=2037924149]
+script = ExtResource("1_yvbpl")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=997798597]
 position = Vector2(0, -16)
@@ -193,3 +195,6 @@ shape = SubResource("CapsuleShape2D_yvbpl")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1730272028]
 libraries/ = SubResource("AnimationLibrary_06baw")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+enabled = true

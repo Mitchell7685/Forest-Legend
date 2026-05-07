@@ -1,5 +1,6 @@
 [gd_scene format=3 uid="uid://khnekb05kwgb"]
 
+[ext_resource type="Script" uid="uid://c0vxa088e1gmp" path="res://scripts/wife.gd" id="1_5nlk0"]
 [ext_resource type="Texture2D" uid="uid://dgb4fu1hcakvh" path="res://Complete Assets/Sick Wife idle-Sheet.png" id="1_nxsw1"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_5nlk0"]
@@ -44,6 +45,7 @@ _data = {
 }
 
 [node name="CharacterBody2D" type="CharacterBody2D" unique_id=1810206643]
+script = ExtResource("1_5nlk0")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1845550648]
 position = Vector2(0, -15)
