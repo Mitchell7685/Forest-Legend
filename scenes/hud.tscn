@@ -2,6 +2,10 @@
 
 [ext_resource type="Texture2D" uid="uid://c2radhm8crume" path="res://Complete Assets/Health Sprite.png" id="1_ahhtf"]
 
+[sub_resource type="LabelSettings" id="LabelSettings_ahhtf"]
+outline_size = 7
+outline_color = Color(0, 0, 0, 1)
+
 [node name="CanvasLayer" type="CanvasLayer" unique_id=60492299]
 
 [node name="HeartBox" type="HBoxContainer" parent="." unique_id=1303115709]
@@ -24,3 +28,11 @@ expand_mode = 2
 layout_mode = 2
 texture = ExtResource("1_ahhtf")
 expand_mode = 2
+
+[node name="DialogueLabel" type="Label" parent="." unique_id=-1273479757]
+offset_left = 50.0
+offset_top = 400.0
+offset_right = 950.0
+offset_bottom = 600.0
+theme_override_font_sizes/font_size = 24
+label_settings = SubResource("LabelSettings_ahhtf")

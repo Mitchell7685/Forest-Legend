@@ -12,6 +12,8 @@ var last_direction = directions.DOWN
 
 func _ready() -> void:
 	change_state(states.IDLE)
+	
+	add_to_group("player")
 
 func _physics_process(delta: float) -> void:
 	get_input()

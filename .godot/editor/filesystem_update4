@@ -7,3 +7,5 @@ res://scenes/hero.tscn
 res://scenes/main.tscn
 res://scripts/hero.gd
 res://scripts/enemy.gd
+res://scripts/husband.gd
+res://scenes/hud.tscn
