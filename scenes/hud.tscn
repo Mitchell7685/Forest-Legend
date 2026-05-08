@@ -1,8 +1,10 @@
 [gd_scene format=3 uid="uid://0tjeg4so6tu5"]
 
 [ext_resource type="Texture2D" uid="uid://c2radhm8crume" path="res://Complete Assets/Health Sprite.png" id="1_ahhtf"]
+[ext_resource type="Script" uid="uid://cu82smpxwvc1a" path="res://scripts/hud.gd" id="1_oo0fn"]
 
 [node name="CanvasLayer" type="CanvasLayer" unique_id=60492299]
+script = ExtResource("1_oo0fn")
 
 [node name="HeartBox" type="HBoxContainer" parent="." unique_id=1303115709]
 offset_left = 45.0

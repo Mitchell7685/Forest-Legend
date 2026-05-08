@@ -11,8 +11,13 @@ config_version=5
 [application]
 
 config/name="Forest Legend"
+run/main_scene="uid://cag8o301ngcjf"
 config/features=PackedStringArray("4.6", "Forward Plus")
 config/icon="res://icon.svg"
+
+[display]
+
+window/stretch/mode="viewport"
 
 [editor]
 
@@ -21,8 +26,8 @@ version_control/autoload_on_startup=true
 
 [global_group]
 
-npc=""
-enemy=""
+hero=""
+enemies=""
 
 [input]
 
@@ -70,6 +75,8 @@ interact={
 [physics]
 
 3d/physics_engine="Jolt Physics"
+2d/default_gravity=0.0
+2d/default_gravity_vector=Vector2(0, 0)
 
 [rendering]
 

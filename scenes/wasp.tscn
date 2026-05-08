@@ -60,9 +60,8 @@ _data = {
 &"move": SubResource("Animation_jqds0")
 }
 
-[node name="CharacterBody2D" type="CharacterBody2D" unique_id=1823329267 groups=["enemy"]]
-collision_layer = 4
-collision_mask = 7
+[node name="wasp" type="CharacterBody2D" unique_id=1823329267 groups=["enemies"]]
+motion_mode = 1
 script = ExtResource("1_jqds0")
 metadata/_edit_group_ = true
 

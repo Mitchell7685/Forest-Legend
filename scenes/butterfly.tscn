@@ -60,10 +60,9 @@ _data = {
 &"move": SubResource("Animation_yym88")
 }
 
-[node name="CharacterBody2D" type="CharacterBody2D" unique_id=1827320880]
-collision_layer = 4
-collision_mask = 7
-metadata/_edit_group_ = true
+[node name="butterfly" type="CharacterBody2D" unique_id=1827320880 groups=["enemies"]]
+motion_mode = 1
+script = ExtResource("1_tq3rt")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=666237868]
 position = Vector2(0, -15)
