@@ -6,6 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://dky1yvbnms74j" path="res://scenes/hero.tscn" id="4_jyhfs"]
 [ext_resource type="PackedScene" uid="uid://dkp2f5df80vok" path="res://scenes/butterfly.tscn" id="5_tbgi4"]
 [ext_resource type="PackedScene" uid="uid://0tjeg4so6tu5" path="res://scenes/hud.tscn" id="6_hud"]
+[ext_resource type="PackedScene" uid="uid://d4jgs16ak41ll" path="res://scenes/herb.tscn" id="7_o6xl0"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_0wfyh"]
 texture = ExtResource("1_o5qli")
@@ -808,3 +809,6 @@ position = Vector2(445, 627)
 position = Vector2(-20, 155)
 
 [node name="HUD" parent="." unique_id=1635258358 instance=ExtResource("6_hud")]
+
+[node name="herb" parent="." unique_id=909617666 instance=ExtResource("7_o6xl0")]
+position = Vector2(138, -511)

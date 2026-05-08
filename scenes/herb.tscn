@@ -1,0 +1,28 @@
+[gd_scene format=3 uid="uid://d4jgs16ak41ll"]
+
+[ext_resource type="Script" path="res://scripts/herb.gd" id="1_herb_script"]
+[ext_resource type="Texture2D" uid="uid://qok1ns4ii37s" path="res://Complete Assets/tile sheet finale.png" id="1_jpbwa"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_ldurg"]
+radius = 28.160255
+
+[node name="herb" type="Area2D" unique_id=909617666]
+script = ExtResource("1_herb_script")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1676140232]
+texture = ExtResource("1_jpbwa")
+region_enabled = true
+region_rect = Rect2(126.0959, 310.56747, 18.289093, 26.660706)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=551958866]
+shape = SubResource("CircleShape2D_ldurg")
+
+[node name="PromptLabel" type="Label" parent="."]
+offset_left = -36.0
+offset_top = -46.0
+offset_right = 36.0
+offset_bottom = -22.0
+text = "Press E"
+horizontal_alignment = 1
+vertical_alignment = 1
+visible = false

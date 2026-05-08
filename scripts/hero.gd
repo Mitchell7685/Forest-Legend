@@ -9,6 +9,7 @@ var state = states.IDLE
 enum directions {UP, DOWN, LEFT, RIGHT}
 var direction = directions.DOWN
 var last_direction = directions.DOWN
+var has_herb: bool = false
 
 func _ready() -> void:
 	change_state(states.IDLE)
