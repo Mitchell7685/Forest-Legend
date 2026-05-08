@@ -13,6 +13,7 @@ var has_herb: bool = false
 
 func _ready() -> void:
 	change_state(states.IDLE)
+	_animation_player.animation_finished.connect(_on_animation_finished)
 	
 	add_to_group("player")
 
@@ -64,6 +65,9 @@ func get_input() -> void:
 	var attack: bool = Input.is_action_just_pressed("attack")
 	velocity.x = 0
 	velocity.y = 0
+
+	if state == states.ATTACK:
+		return
 	
 
 	last_direction = direction
@@ -93,8 +97,11 @@ func get_input() -> void:
 		change_state(states.RUN)
 	if attack:
 		change_state(states.ATTACK)
-	if ((state == states.RUN and velocity == Vector2.ZERO) or 
-	(state == states.ATTACK and not attack)):
+	if state == states.RUN and velocity == Vector2.ZERO:
+		change_state(states.IDLE)
+
+func _on_animation_finished(anim_name: StringName) -> void:
+	if state == states.ATTACK and String(anim_name).begins_with("attack"):
 		change_state(states.IDLE)
 
 func respawn(_position):
