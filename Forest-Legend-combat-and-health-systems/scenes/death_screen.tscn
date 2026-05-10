@@ -1,0 +1,47 @@
+[gd_scene format=3 uid="uid://cj7f2mktlto2i"]
+
+[ext_resource type="Script" uid="uid://cv2kgyqtvhjge" path="res://scripts/death_screen.gd" id="1_uyutr"]
+
+[node name="DeathScreen" type="Control" unique_id=819731997]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("1_uyutr")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1842112105]
+layout_mode = 0
+offset_right = 1151.0
+offset_bottom = 646.0
+color = Color(0, 0, 0, 1)
+
+[node name="Label" type="Label" parent="." unique_id=2012910206]
+layout_mode = 0
+offset_left = 166.0
+offset_top = 22.0
+offset_right = 960.0
+offset_bottom = 619.0
+theme_override_font_sizes/font_size = 38
+text = "You Died!
+
+You were unable to bring the healing herb in time, and the husband tragically lost his wife as well."
+horizontal_alignment = 1
+autowrap_mode = 3
+
+[node name="RetryButton" type="Button" parent="." unique_id=1586466901]
+layout_mode = 0
+offset_left = 485.0
+offset_top = 397.0
+offset_right = 649.0
+offset_bottom = 487.0
+theme_override_font_sizes/font_size = 34
+text = "Retry?"
+
+[node name="QuitButton" type="Button" parent="." unique_id=1384639938]
+layout_mode = 0
+offset_left = 484.0
+offset_top = 494.0
+offset_right = 650.0
+offset_bottom = 586.0
+theme_override_font_sizes/font_size = 34
+text = "Quit"

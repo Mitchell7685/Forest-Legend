@@ -1,0 +1,45 @@
+[gd_scene format=3 uid="uid://brp73vp3slvmg"]
+
+[ext_resource type="Script" uid="uid://ct3mg4b8d4a7q" path="res://scripts/start_menu.gd" id="1_ouf4f"]
+
+[node name="StartMenu" type="Control" unique_id=1780752800]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("1_ouf4f")
+
+[node name="Background" type="ColorRect" parent="." unique_id=447802682]
+layout_mode = 0
+offset_right = 1155.0
+offset_bottom = 645.0
+color = Color(0.047946967, 0.29621384, 0, 1)
+
+[node name="Label" type="Label" parent="." unique_id=776998635]
+layout_mode = 0
+offset_left = 347.0
+offset_top = 19.0
+offset_right = 768.0
+offset_bottom = 162.0
+theme_override_font_sizes/font_size = 58
+text = "Forest Legend"
+horizontal_alignment = 1
+autowrap_mode = 3
+
+[node name="StartButton" type="Button" parent="." unique_id=1523825875]
+layout_mode = 0
+offset_left = 440.0
+offset_top = 355.0
+offset_right = 667.0
+offset_bottom = 464.0
+theme_override_font_sizes/font_size = 33
+text = "Start Game"
+
+[node name="QuitButton" type="Button" parent="." unique_id=173823676]
+layout_mode = 0
+offset_left = 442.0
+offset_top = 483.0
+offset_right = 669.0
+offset_bottom = 592.0
+theme_override_font_sizes/font_size = 33
+text = "Quit"
