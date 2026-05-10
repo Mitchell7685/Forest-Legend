@@ -21,9 +21,7 @@ func _physics_process(delta: float) -> void:
 	for i in get_slide_collision_count():
 		var collision: KinematicCollision2D = get_slide_collision(i)
 		var collider: Object = collision.get_collider()
-		var normal: Vector2 = collision.get_normal()
-		var collision_dot_prod: float = velocity.normalized().dot(normal)
-		if state == states.ATTACK and collider.is_in_group("enemies") and collision_dot_prod < 0:
+		if state == states.ATTACK and collider.is_in_group("enemies") and facing_collider(collider):
 			collider.take_damage()
 
 func change_state(new_state) -> void:
@@ -96,6 +94,18 @@ func get_input() -> void:
 		change_state(states.ATTACK)
 	if state == states.RUN and velocity == Vector2.ZERO:
 		change_state(states.IDLE)
+
+func facing_collider(collider: Object) -> bool:
+	var is_facing_collider: bool = false
+	if collider.position.y > position.y and direction == directions.DOWN:
+		is_facing_collider = true
+	if collider.position.y < position.y and direction == directions.UP:
+		is_facing_collider = true
+	if collider.position.x > position.x and direction == directions.RIGHT:
+		is_facing_collider = true
+	if collider.position.x < position.x and direction == directions.LEFT:
+		is_facing_collider = true
+	return is_facing_collider
 
 func respawn(_position):
 	position = _position

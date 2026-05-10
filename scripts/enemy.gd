@@ -13,23 +13,20 @@ func _ready() -> void:
 func _physics_process(delta: float) -> void:
 	match direction:
 		directions.UP:
-			velocity.y = -speed
+			velocity = Vector2(0, -speed)
 		directions.DOWN:
-			velocity.y = speed
+			velocity = Vector2(0, speed)
 		directions.LEFT:
-			velocity.x = -speed
+			velocity = Vector2(-speed, 0)
 		directions.RIGHT:
-			velocity.x = speed
+			velocity = Vector2(speed, 0)
 	
-	var collision = move_and_collide(velocity * delta)
+	var collision: KinematicCollision2D = move_and_collide(velocity * delta)
 	if collision:
 		var collider: Object = collision.get_collider()
-		var normal: Vector2 = collision.get_normal()
-		var collision_dot_prod: float = velocity.normalized().dot(normal)
-		if collider.name == "hero" and collision_dot_prod <= -0.7:
-			attack(collider)
-		if collision_dot_prod <= -0.5:
-			change_dir()
+		if collider.name == "hero":
+			collider.take_damage()
+		change_dir()
 
 func change_dir() -> void:
 	var valid_states: Array = directions.values()

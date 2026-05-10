@@ -9,7 +9,7 @@ func _ready() -> void:
 	body_exited.connect(_on_body_exited)
 
 func _on_body_entered(body: Node) -> void:
-	if body is Node and body.is_in_group("player"):
+	if body is Node and body.name == "hero":
 		player_in_range = true
 		player_ref = body
 		$PromptLabel.visible = true
