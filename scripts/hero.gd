@@ -1,5 +1,5 @@
 extends CharacterBody2D
-signal attacked
+signal hurt
 signal died
 @onready var _sprite: Sprite2D = $Sprite2D
 @onready var _animation_player: AnimationPlayer = $AnimationPlayer
@@ -10,18 +10,21 @@ enum directions {UP, DOWN, LEFT, RIGHT}
 var direction = directions.DOWN
 var last_direction = directions.DOWN
 var has_herb: bool = false
+var health: int = 3
 
 func _ready() -> void:
 	change_state(states.IDLE)
-	_animation_player.animation_finished.connect(_on_animation_finished)
-	
-	add_to_group("player")
 
 func _physics_process(delta: float) -> void:
 	get_input()
 	move_and_slide()
-	# put code to prevent the player from moving out of bounds
-	# here when the map size is known
+	for i in get_slide_collision_count():
+		var collision: KinematicCollision2D = get_slide_collision(i)
+		var collider: Object = collision.get_collider()
+		var normal: Vector2 = collision.get_normal()
+		var collision_dot_prod: float = velocity.normalized().dot(normal)
+		if state == states.ATTACK and collider.is_in_group("enemies") and collision_dot_prod < 0:
+			collider.take_damage()
 
 func change_state(new_state) -> void:
 	state = new_state
@@ -50,7 +53,6 @@ func change_state(new_state) -> void:
 					_animation_player.play("attack_front")
 				directions.LEFT, directions.RIGHT:
 					_animation_player.play("attack_side")
-			attacked.emit(direction)
 		states.HURT:
 			pass
 		states.DEAD:
@@ -65,11 +67,6 @@ func get_input() -> void:
 	var attack: bool = Input.is_action_just_pressed("attack")
 	velocity.x = 0
 	velocity.y = 0
-
-	if state == states.ATTACK:
-		return
-	
-
 	last_direction = direction
 	
 	# movement
@@ -95,13 +92,9 @@ func get_input() -> void:
 		change_state(states.RUN)
 	elif state == states.RUN and direction != last_direction:
 		change_state(states.RUN)
-	if attack:
+	if attack and state != states.ATTACK:
 		change_state(states.ATTACK)
 	if state == states.RUN and velocity == Vector2.ZERO:
-		change_state(states.IDLE)
-
-func _on_animation_finished(anim_name: StringName) -> void:
-	if state == states.ATTACK and String(anim_name).begins_with("attack"):
 		change_state(states.IDLE)
 
 func respawn(_position):
@@ -109,3 +102,20 @@ func respawn(_position):
 	show()
 	direction = directions.DOWN
 	change_state(states.IDLE)
+
+func take_damage(amount: int = 1) -> void:
+	if state == states.HURT:
+		return
+	health -= amount
+	change_state(states.HURT)
+	hurt.emit(health)
+	if health <= 0:
+		change_state(states.DEAD)
+	else:
+		await get_tree().create_timer(2).timeout
+		change_state(states.IDLE)
+
+func _on_animation_player_animation_finished(anim_name: StringName) -> void:
+	if state == states.ATTACK:
+		if anim_name.begins_with("attack"):
+			change_state(states.IDLE)

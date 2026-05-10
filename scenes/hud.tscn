@@ -1,12 +1,14 @@
 [gd_scene format=3 uid="uid://0tjeg4so6tu5"]
 
 [ext_resource type="Texture2D" uid="uid://c2radhm8crume" path="res://Complete Assets/Health Sprite.png" id="1_ahhtf"]
+[ext_resource type="Script" uid="uid://dsw1dknk2mqy" path="res://scripts/hud.gd" id="1_oo0fn"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_ahhtf"]
 outline_size = 7
 outline_color = Color(0, 0, 0, 1)
 
-[node name="CanvasLayer" type="CanvasLayer" unique_id=60492299]
+[node name="hud" type="CanvasLayer" unique_id=60492299]
+script = ExtResource("1_oo0fn")
 
 [node name="HeartBox" type="HBoxContainer" parent="." unique_id=1303115709]
 offset_left = 45.0

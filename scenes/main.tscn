@@ -804,19 +804,21 @@ tile_set = SubResource("TileSet_sugp2")
 tile_map_data = PackedByteArray("AAAZAB0AAAAJAA0AAAAZAB4AAAAJAA4AAAAZAB8AAAAJAA8AAAAZACAAAAAJABAAAAAaAB0AAAAKAA0AAAAaAB4AAAAKAA4AAAAaAB8AAAAKAA8AAAAaACAAAAAKABAAAAAbAB0AAAALAA0AAAAbAB4AAAALAA4AAAAbAB8AAAALAA8AAAAbACAAAAALABAAAAAcAB0AAAAMAA0AAAAcAB4AAAAMAA4AAAAcAB8AAAAMAA8AAAAcACAAAAAMABAAAAAdAB0AAAANAA0AAAAdAB4AAAANAA4AAAAdAB8AAAANAA8AAAAdACAAAAANABAAAAA=")
 tile_set = SubResource("TileSet_sugp2")
 
-[node name="CharacterBody2D" parent="." unique_id=783206306 instance=ExtResource("2_sugp2")]
+[node name="husband" parent="." unique_id=783206306 instance=ExtResource("2_sugp2")]
 position = Vector2(512, 546)
 
-[node name="CharacterBody2D2" parent="." unique_id=1810206643 instance=ExtResource("3_jyhfs")]
+[node name="wife" parent="." unique_id=1810206643 instance=ExtResource("3_jyhfs")]
 position = Vector2(529, 546)
 
-[node name="hero" parent="." unique_id=2037924149 groups=["hero"] instance=ExtResource("4_jyhfs")]
+[node name="hero" parent="." unique_id=2037924149 instance=ExtResource("4_jyhfs")]
 position = Vector2(445, 627)
 
-[node name="CharacterBody2D4" parent="." unique_id=1827320880 instance=ExtResource("5_tbgi4")]
+[node name="butterfly" parent="." unique_id=1827320880 instance=ExtResource("5_tbgi4")]
 position = Vector2(-20, 155)
 
 [node name="HUD" parent="." unique_id=1635258358 instance=ExtResource("6_hud")]
 
 [node name="herb" parent="." unique_id=909617666 instance=ExtResource("7_o6xl0")]
 position = Vector2(138, -511)
+
+[connection signal="hurt" from="hero" to="HUD" method="update_lives"]

@@ -7,13 +7,11 @@ var player_in_range = false
 var player_ref: Node = null
 
 func _ready() -> void:
-	
 	$InteractionArea.body_entered.connect(_on_interaction_area_entered)
 	$InteractionArea.body_exited.connect(_on_interaction_area_exited)
 
 func _on_interaction_area_entered(body: Node) -> void:
-
-	if body is Node and body.is_in_group("player"):
+	if body is Node and body.is_in_group("hero"):
 		player_in_range = true
 		player_ref = body
 		$InteractionArea/PromptLabel.visible = true

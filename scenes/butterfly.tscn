@@ -60,7 +60,7 @@ _data = {
 &"idle": SubResource("Animation_yym88")
 }
 
-[node name="CharacterBody2D" type="CharacterBody2D" unique_id=1827320880]
+[node name="butterfly" type="CharacterBody2D" unique_id=1827320880 groups=["enemies"]]
 script = ExtResource("1_tq3rt")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=666237868]

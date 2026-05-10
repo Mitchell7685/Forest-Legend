@@ -47,7 +47,7 @@ _data = {
 [sub_resource type="CircleShape2D" id="CircleShape2D_husband"]
 radius = 50.0
 
-[node name="CharacterBody2D" type="CharacterBody2D" unique_id=783206306]
+[node name="husband" type="CharacterBody2D" unique_id=783206306]
 script = ExtResource("1_1b8nh")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1067152722]
@@ -63,12 +63,13 @@ shape = SubResource("CapsuleShape2D_y7lht")
 libraries/ = SubResource("AnimationLibrary_t7qm5")
 autoplay = &"idle"
 
-[node name="InteractionArea" type="Area2D" parent="."]
+[node name="InteractionArea" type="Area2D" parent="." unique_id=1085633699]
 
-[node name="CollisionShape2D2" type="CollisionShape2D" parent="InteractionArea"]
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="InteractionArea" unique_id=299255229]
 shape = SubResource("CircleShape2D_husband")
 
-[node name="PromptLabel" type="Label" parent="InteractionArea"]
+[node name="PromptLabel" type="Label" parent="InteractionArea" unique_id=1751800753]
+visible = false
 offset_left = -30.0
 offset_top = -60.0
 offset_right = 30.0
@@ -76,4 +77,3 @@ offset_bottom = -40.0
 text = "Press E"
 horizontal_alignment = 1
 vertical_alignment = 1
-visible = false
