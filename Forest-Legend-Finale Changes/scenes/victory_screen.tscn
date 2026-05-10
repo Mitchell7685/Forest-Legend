@@ -1,0 +1,48 @@
+[gd_scene format=3 uid="uid://cndrg7ajhhltq"]
+
+[ext_resource type="Script" uid="uid://d051xirecbhqo" path="res://scripts/victory_screen.gd" id="1_ujlt3"]
+
+[node name="VictoryScreen" type="Control" unique_id=711947994]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("1_ujlt3")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=84289918]
+layout_mode = 0
+offset_right = 1151.0
+offset_bottom = 647.0
+color = Color(0, 0, 0, 1)
+
+[node name="Label" type="Label" parent="." unique_id=878728368]
+layout_mode = 0
+offset_left = 213.0
+offset_top = 48.0
+offset_right = 922.0
+offset_bottom = 461.0
+theme_override_font_sizes/font_size = 33
+text = "You Saved the Wife!
+
+The healing herb worked.
+The husband is grateful for your help."
+horizontal_alignment = 1
+autowrap_mode = 3
+
+[node name="PlayAgainButton" type="Button" parent="." unique_id=501982052]
+layout_mode = 0
+offset_left = 479.0
+offset_top = 341.0
+offset_right = 664.0
+offset_bottom = 442.0
+theme_override_font_sizes/font_size = 28
+text = "Play Again?"
+
+[node name="QuitButton" type="Button" parent="." unique_id=835689238]
+layout_mode = 0
+offset_left = 480.0
+offset_top = 450.0
+offset_right = 664.0
+offset_bottom = 550.0
+theme_override_font_sizes/font_size = 28
+text = "Quit"
